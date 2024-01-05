@@ -1,0 +1,38 @@
+import = [
+    "~/.config/alacritty/themes/themes/carbonfox.toml"
+]
+
+[env]
+ZDOTDIR = "/Users/rensux/.config/zsh"
+
+[shell]
+program = "/usr/local/bin/zsh"
+args = ["-l"]
+
+[window]
+opacity = 0.9
+blur = true
+
+padding.x = 2
+padding.y = 2
+dynamic_padding = true
+
+dimensions.columns = 120
+dimensions.lines = 40
+
+resize_increments = true
+
+[scrolling]
+multiplier = 1
+
+[font]
+normal.family = "JetBrainsMono Nerd Font"
+
+size = 15.0
+
+[selection]
+save_to_clipboard = true
+
+
+
+

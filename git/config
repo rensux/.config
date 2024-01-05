@@ -1,0 +1,11 @@
+[user]
+	email = renzo.russel@gmail.com
+	name = rensux
+[core]
+	editor = nvim
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[alias]
+	supdate = submodule update --remote --merge
