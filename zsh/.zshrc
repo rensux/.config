@@ -1,6 +1,3 @@
-# Source Zsh Autocomplete plugin
-source /usr/local/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -12,8 +9,8 @@ bindkey -e
 zstyle :compinstall filename '/home/rensux/.config/zsh/.zshrc'
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-# autoload -Uz compinit
-# compinit
+autoload -Uz compinit
+compinit
 # End of lines added by compinstall
 
 # Load version control info

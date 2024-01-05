@@ -1,17 +1,27 @@
-# format = """
-# $username\
-# $hostname\
-# $directory\
-# $git_branch\
-# $git_state\
-# $git_status\
-# $cmd_duration\
-# $python\
-# $character"""
-
-format = '$all'
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$cmd_duration\
+$line_break\
+$character"""
 
 add_newline = false
+
+[username]
+show_always = true
+format = '[$user]($style)[@](italic bright-black)'
+
+[hostname]
+ssh_only = false
+format = '[$ssh_symbol$hostname]($style) '
+style = 'bold bright-green'
+
+[line_break]
+disabled = true
 
 [directory]
 style = "purple"
@@ -22,8 +32,8 @@ error_symbol = "[\\$](red)"
 vimcmd_symbol = "[\\$](green)"
 
 [git_branch]
-format = "[$branch]($style)"
-style = "bright-black"
+format = "[$symbol$branch]($style)"
+style = "#769ff0"
 
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
@@ -43,8 +53,4 @@ style = "bright-black"
 [cmd_duration]
 format = "[$duration]($style) "
 style = "yellow"
-
-[python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
 
