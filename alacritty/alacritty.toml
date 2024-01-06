@@ -24,6 +24,7 @@ resize_increments = true
 
 [scrolling]
 multiplier = 1
+history = 100000
 
 [font]
 normal.family = "JetBrainsMono Nerd Font"

@@ -1,12 +1,12 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE='~/.config/zsh/.zsh_history'
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/rensux/.config/zsh/.zshrc'
+zstyle :compinstall filename '~/.config/zsh/.zshrc'
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 autoload -Uz compinit
@@ -27,8 +27,7 @@ PROMPT=$PROMPT$'%{\e[38;5;43m%}%n%{\e[m%}'				# username
 PROMPT=$PROMPT$'%{\e[38;5;81m%}@%{\e[m%}'				# @
 PROMPT=$PROMPT$'%{\e[38;5;38m%}%m%{\e[m%}'				# hostname
 PROMPT=$PROMPT$'%{\e[38;5;194m%}:%{\e[m%}'				# :
-#PROMPT=$PROMPT$'%{\e[38;5;159m%}%~%{\e[m%} '				# pwd
-PROMPT=$PROMPT$'%{\e[38;5;159m%}%(4~|%-1~/.../%2~|%3~)%{\e[m%} '	# short pwd
+PROMPT=$PROMPT$'%{\e[38;5;159m%}%~%{\e[m%} '				# pwd
 PROMPT=$PROMPT$'%{\e[38;5;147m%}${vcs_info_msg_0_}%{\e[m%}'		# (git branch)
 PROMPT=$PROMPT$'%{\e[38;5;81m%}$%{\e[m%} '				# $
 
@@ -41,10 +40,6 @@ source $HOME/.config/profile/.env
 # Source cargo env variables
 source "$HOME/.cargo/env"
 
-# persistant CPAN modules across updates (this runs a bunch of bs every time u start a file. disabled)
-#eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-
-# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
