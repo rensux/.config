@@ -9,3 +9,5 @@
 	defaultBranch = main
 [alias]
 	supdate = submodule update --remote --merge
+[oh-my-zsh]
+    hide-info = 1
