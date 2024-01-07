@@ -36,7 +36,6 @@ format = "[$symbol$branch]($style) "
 style = "#769ff0"
 
 [git_status]
-#format = "[*$conflicted$deleted$renamed$modified$staged$untracked](128) [$ahead_behind$stashed]($style)"
 format = '[\[[$all_status](197)[$ahead_behind](213)\]]($style) '
 staged = '[+$count](green)'
 stashed = "≡"
