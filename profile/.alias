@@ -10,6 +10,9 @@ alias v="nvim"
 alias mkdir="mkdir -pv"
 alias grep="grep --color=auto"
 
+# shortcut to edit ~/.config
+alias veconf="v ~/.config" #vim edit config
+
 # Thesis shortcuts
 alias cben="cd ~/Desktop/Thesis/spoofax-releng/stratego/stratego.build.spoofax2.benchmark"
 alias clan="cd ~/Desktop/Thesis/spoofax-releng/stratego/stratego.lang"
