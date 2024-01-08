@@ -1,4 +1,18 @@
-require("rensux")
+require("remap")
+
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+require("lazy").setup("plugins")
 
 local function load_options()
 	local cache_dir = os.getenv("HOME") .. "/.cache/nvim"
@@ -18,7 +32,7 @@ local function load_options()
 		completeopt = "menuone,noselect",
 		concealcursor = "niv",
 		conceallevel = 0,
-		cursorcolumn = false, 
+		cursorcolumn = false,
 		cursorline = true,
 		diffopt = "filler,iwhite,internal,algorithm:patience",
 		display = "lastline",
@@ -107,8 +121,5 @@ end
 
 load_options()
 
-vim.cmd.colorscheme "catppuccin"
-
--- fix ruby provider not being found
-vim.g.ruby_host_prog = "/usr/local/lib/ruby/gems/3.2.0/bin/neovim-ruby-host"
+vim.cmd.colorscheme "oxocarbon"
 
